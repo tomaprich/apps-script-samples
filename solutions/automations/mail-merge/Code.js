@@ -25,7 +25,7 @@ limitations under the License.
  * Change these to match the column names you are using for email 
  * recipient addresses and email sent column.
 */
-const RECIPIENT_COL  = "Recipient";
+const RECIPIENT_COL  = 'toma2@pdx.edu';
 const EMAIL_SENT_COL = "Email Sent";
  
 /** 
@@ -94,8 +94,8 @@ function sendEmails(subjectLine, sheet=SpreadsheetApp.getActiveSheet()) {
         // Uncomment advanced parameters as needed (see docs for limitations)
         GmailApp.sendEmail(row[RECIPIENT_COL], msgObj.subject, msgObj.text, {
           htmlBody: msgObj.html,
-          // bcc: 'a.bcc@email.com',
-          // cc: 'a.cc@email.com',
+          bcc: "Recipient",
+          cc: 'yachi@pdx.edu',
           // from: 'an.alias@email.com',
           // name: 'name of the sender',
           // replyTo: 'a.reply@email.com',
